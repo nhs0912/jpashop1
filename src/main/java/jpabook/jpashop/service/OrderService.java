@@ -17,7 +17,6 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 public class OrderService {
 
-
     private final OrderRepository orderRepository;
     private final MemberRepository memberRepository;
     private final ItemRepository itemRepository;
@@ -44,7 +43,16 @@ public class OrderService {
 
         return order.getId();
     }
+
     //취소
+    @Transactional
+    public void cancelOrder(Long orderId) {
+        Order order = orderRepository.findOne(orderId);
+        order.cancel();
+    }
 
     //검색
+//    public List<Order> findOrders(OrderSearch orderSearch) {
+//        return orderRepository.findAll(orderSearch);
+//    }
 }
