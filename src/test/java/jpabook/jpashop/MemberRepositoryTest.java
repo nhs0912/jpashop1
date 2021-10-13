@@ -27,7 +27,7 @@ public class MemberRepositoryTest {
 //        Long saveId = memberRepository.save(member);
 //        Member findMember = memberRepository.find(saveId);
 //
-//        //thenx 
+//        //thenx
 
 
     }
