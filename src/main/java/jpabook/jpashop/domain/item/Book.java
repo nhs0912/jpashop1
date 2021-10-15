@@ -11,8 +11,6 @@ import javax.persistence.Entity;
 @Getter
 @Setter
 public class Book extends Item {
-
     private String author;
-    private int price;
-
+    private String isbn;
 }
